@@ -1,0 +1,14 @@
+
+
+<% @pretty_grid = @grid.join("") %>
+
+<form action="/score">
+  <label for="question">Longest Word Game</label>
+  <input type="text" id="word" name="query" placeholder="type your word">
+  <input type='hidden' id='grid' name='grid' value="<%= @pretty_grid %>" >
+  <input type='hidden' name='start_time' value="<%= @start_time %>" >
+  <input type="submit" value="Go on!">
+</form>
+
+<%= @grid %>
+
